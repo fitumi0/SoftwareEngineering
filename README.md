@@ -1,1 +1,3 @@
-# Program Engineering
+# Software Engineering
+
+Репозиторий для лабораторных работ по предмету "Программная инженерия".
