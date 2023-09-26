@@ -18,9 +18,10 @@ public class DiscriminantCalculatorTests
     }
 
     [TestMethod()]
-    [DataRow(-5, 1, 4, -20)]
+    [DataRow(-5, 1, 4, -0.8)]
+    [DataRow(1, -4, 3, 3)]
     public void CalculateValidTest(double a, double b, double c, double expected)
     {
-        Assert.AreEqual(expected, DiscriminantCalculator.Calculate(a, b, c)[0]);
+        Assert.AreEqual(expected, DiscriminantCalculator.GetRoots(a, b, c)[0]);
     }
 }
