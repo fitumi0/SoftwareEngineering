@@ -26,7 +26,9 @@ public class DiscriminantCalculator
     /// <returns></returns>
     private static (double x1, double x2) GetTwoResults(double desctiminant, double a, double b)
     {
-        return ((-b + Math.Sqrt(desctiminant)) / 2 * a, (-b - Math.Sqrt(desctiminant)) / 2 * a);
+        return (
+            (-b + Math.Sqrt(desctiminant)) / (2 * a),
+            (-b - Math.Sqrt(desctiminant)) / (2 * a));
     }
 
     /// <summary>
@@ -48,7 +50,7 @@ public class DiscriminantCalculator
     /// <param name="b"></param>
     /// <param name="c"></param>
     /// <returns>Double[]</returns>
-    public static double[] Calculate(double a, double b, double c)
+    public static double[] GetRoots(double a, double b, double c)
     {
         var d = Discriminant(a, b, c);
 
@@ -59,9 +61,9 @@ public class DiscriminantCalculator
 
         if (d == 0)
         {
-            return new double[1] 
+            return new double[1]
             {
-                GetOneResult(a, b) 
+                GetOneResult(a, b)
             };
         }
 
